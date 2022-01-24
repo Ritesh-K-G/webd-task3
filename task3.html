@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Keeper
+        </title>
+        <style>
+            .heading{
+                padding:10px;
+                background-color: rgb(197, 119, 16);
+                font-weight: 400;
+                font-size: large;
+                color: rgb(245, 240, 234);
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            .notes{
+                text-align: center;
+            }
+            #textarea1{
+                background-color: #dddddd;
+                color: black;
+                padding: 1em;
+                border-radius: 10px;
+                font-family: cursive;
+                font-weight: 500;
+                font-size: 16px;
+                width: 200px;
+                height: 30px;
+            }
+            textarea{
+                background-color: #dddddd;
+                color: black;
+                padding: 1em;
+                border-radius: 10px;
+                font-family: cursive;
+                font-weight: 500;
+                font-size: 16px;
+                width: 200px;
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="heading">
+            <h1>
+                <img src="https://cdn-icons.flaticon.com/png/512/1008/premium/1008958.png?token=exp=1642966181~hmac=49760516a8923057fc37b2b682c46374" height="25px"; width="25px">
+                Keeper
+            </h1>
+        </div>
+        <br>
+        <div class="notes">
+            <textarea id="textarea1" placeholder="Title"></textarea><br>
+            <textarea id="textarea2" placeholder="Add the notes"></textarea><br>
+            <button onclick="myfunction()">Add</button><br><br>
+        </div>
+        <script>
+            function myfunction(){
+                var x = document.createElement("TEXTAREA")
+                var z = document.createElement("BUTTON");
+                var w = document.createTextNode("Delete");
+                var t = document.createTextNode(document.getElementById('textarea1').value+ "  -->  " + document.getElementById('textarea2').value);
+                x.appendChild(t);
+                z.appendChild(w);
+                document.body.appendChild(x);
+                document.body.appendChild(z);
+                document.getElementById("textarea1").value="";
+                document.getElementById("textarea2").value="";
+            }
+           
+        </script>
+        
+        
+    </body>
+</html>
+
+                
+                
